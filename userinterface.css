@@ -1,0 +1,10 @@
+
+tr:hover {background-color: #00FF7F}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
