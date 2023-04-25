@@ -11,19 +11,19 @@ CFLAGS= -std=c++14  -Wno-deprecated-declarations
 RM= /bin/rm -f
 
 #all: testcontact contactApp PutHTML 
-all: PutHTML 
+all: PutHTML console
 
-#contactEntry.o: contactEntry.cpp contactEntry.h
-#	$(CC) -c $(CFLAGS) contactEntry.cpp
+userEntry.o: userEntry.cpp userEntry.h
+	$(CC) -c $(CFLAGS) userEntry.cpp
 
-#contactDB.o: contactDB.cpp contactDB.h
-#	$(CC) -c $(CFLAGS) -I/usr/include/cppconn contactDB.cpp
+db.o: db.cpp db.h
+	$(CC) -c $(CFLAGS) -I/usr/include/cppconn db.cpp
 
-#testcontact.o: testcontact.cpp contactEntry.h	contactDB.h
-#	$(CC) -c $(CFLAGS) testcontact.cpp
+console.o: console.cpp userEntry.h db.h
+	$(CC) -c $(CFLAGS) console.cpp
 
-#testcontact: testcontact.o contactDB.o contactEntry.o
-#	$(CC) testcontact.o contactDB.o contactEntry.o -L/usr/lib -o testcontact -L/usr/local/lib -lmariadbcpp
+console: console.o db.o userEntry.o
+	$(CC) console.o db.o userEntry.o -L/usr/lib -o console -L/usr/local/lib -lmariadbcpp
 
 #contactApp.o: contactApp.cpp httplib.h
 #	$(CC) -c $(CFLAGS) contactApp.cpp
@@ -32,14 +32,14 @@ all: PutHTML
 #	$(CC) contactApp.o contactDB.o contactEntry.o -o contactApp -L/usr/local/lib -lmariadbcpp
 
 PutHTML:
-	sudo cp userinterface.html /var/www/html/VisitorArtEngagement/
+	sudo cp userinterface.html /var/www/html/visitorArtEngagement/
 #	sudo cp contactApp.js /var/www/html/VisitorArtEngagement/
-	sudo cp userinterface.css /var/www/html/VisitorArtEngagement/
-	sudo cp Color-emotion-wheel.PNG /var/www/html/VisitorArtEngagement/
+	sudo cp userinterface.css /var/www/html/visitorArtEngagement/
+	sudo cp Color-emotion-wheel.PNG /var/www/html/visitorArtEngagement/
 
 
 	echo "Current contents of your HTML directory: "
-	ls -l /var/www/html/VisitorArtEngagement
+	ls -l /var/www/html/visitorArtEngagement
 
 #clean:
 #	rm -f *.o  contactApp testcontact
