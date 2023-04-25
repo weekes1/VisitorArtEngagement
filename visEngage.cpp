@@ -63,6 +63,15 @@ int main(void) {
     result = getUserJSON(locCols);
     res.set_content(result, "text/json");
   });
+
+  svr.Get(R"(/engage/findCol/(.*))", [&](const Request& req, Response& res) {
+    string color = req.matches[1];
+    res.set_header("Access-Control-Allow-Origin","*");
+    string result;
+    vector<userEntry> cols = vdb.findByLocation(color);
+    result = getUserJSON(cols);
+    res.set_content(result, "text/json");
+  });
     
   cout << "Server listening on port " << port << endl;
   svr.listen("0.0.0.0", port);
