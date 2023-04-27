@@ -2,8 +2,7 @@
 sudo mkdir /var/www/html/VisitorArtEngagement/  
 sudo chown ubuntu /var/www/html/VisitorArtEngagement/ 
 
-# VisitorArtEngagementO
-utput
+# VisitorArtEngagementOutput
 sudo mkdir /var/www/html/colorOutputVisEngage/  
 sudo chown ubuntu /var/www/html/colorOutputVisEngage/ 
 
