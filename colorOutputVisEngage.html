@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Canvas Squares</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const squareSize = 50;
+      const numRows = Math.ceil(height / squareSize);
+      const numCols = Math.ceil(width / squareSize);
+      
+      canvas.width = width;
+      canvas.height = height;
+      
+      for (let i = 0; i < numRows; i++) {
+        for (let j = 0; j < numCols; j++) {
+          const x = j * squareSize;
+          const y = i * squareSize;
+          const color = getRandomColor();
+          context.fillStyle = color;
+          context.fillRect(x, y, squareSize, squareSize);
+        }
+      }
+      
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>
+
