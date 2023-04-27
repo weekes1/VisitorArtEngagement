@@ -1,6 +1,11 @@
 # VisitorArtEngagement
 sudo mkdir /var/www/html/VisitorArtEngagement/  
-sudo chown ubuntu /var/www/html/VisitorArtEngagement/  
+sudo chown ubuntu /var/www/html/VisitorArtEngagement/ 
+
+# VisitorArtEngagementO
+utput
+sudo mkdir /var/www/html/colorOutputVisEngage/  
+sudo chown ubuntu /var/www/html/colorOutputVisEngage/ 
 
 # SQL Table
 Create table "visitorEngagement" in database "scmp318"
