@@ -72,6 +72,16 @@ int main(void) {
     result = getUserJSON(cols);
     res.set_content(result, "text/json");
   });
+
+  svr.Get(R"(/engage/clearLoc/(.*))", [&](const Request& req, Response& res) {
+    string loc = req.matches[1];
+    res.set_header("Access-Control-Allow-Origin","*");
+    string result;
+    vdb.rmLoc(loc);
+
+    result = "{\"status\":\"success\"}";
+    res.set_content(result, "text/json");
+  });
     
   cout << "Server listening on port " << port << endl;
   svr.listen("0.0.0.0", port);

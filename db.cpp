@@ -120,3 +120,14 @@ userEntry visDB::fetchEntry(string id){
     }
     return entry;
 }
+
+void visDB::rmLoc(string location) {
+	if (!conn) {
+   		cerr << "Invalid database connection" << endl;
+   		exit (EXIT_FAILURE);
+  	}
+	
+	std::unique_ptr<sql::Statement> stmnt(conn->createStatement());
+
+	stmnt->executeQuery("DELETE FROM `visitorEngagement` WHERE Location = '"+location+"'");
+}

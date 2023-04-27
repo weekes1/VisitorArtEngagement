@@ -27,6 +27,7 @@ public:
 
     userEntry fetchEntry(string id);
     void addEntry(string color, string location);
+    void rmLoc(string location);
     
 private:
     const string db_url=DB_URL;
