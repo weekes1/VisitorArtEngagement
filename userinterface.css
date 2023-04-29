@@ -9,9 +9,14 @@ tr:hover {background-color: #00FF7F}
   width: 50%;
 }
 .center-buttons {
-  text-align: center;
+   border-radius: 10px;
+   text-align: center;
   margin-top:20px;
   transform: scale(1.5);
+}
+
+.button-style{
+  border-radius: 10px;
 }
 
 body{
