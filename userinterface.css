@@ -17,8 +17,18 @@ tr:hover {background-color: #00FF7F}
 
 .button-style{
   border-radius: 10px;
+  
+
 }
 
+.input-button-style{
+background: linear-gradient(to right, red, orange, yellow, #32CD32, #40E0D0, blue, purple,violet);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
 
 body{
     background-image:url(http://www.lemessurier.com/sites/default/files/projectslides/gund_gallery_2_0.jpg);

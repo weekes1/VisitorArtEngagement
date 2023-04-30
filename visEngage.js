@@ -12,6 +12,19 @@ var expTimeSec = 10; // number of seconds that a message stays before expiring
 // document.getElementById('status').style.display = 'none';
 // document.getElementById('leave').style.display = 'none';
 
+const showButton = document.getElementById('btn-input');
+const hiddenButtons = document.getElementById('input-div');
+const image = document.getElementById('img-div');
+const imagetxt = document.getElementById('imgtxt-div');
+
+
+showButton.addEventListener('click', () => {
+  hiddenButtons.style.display = 'block';
+  showButton.style.display = 'none';
+  image.style.display = 'none';
+  imagetxt.style.display = 'none';
+
+});
 // Action if they push a color button 
 document.getElementById('btn-red').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-red').innerHTML;
@@ -71,7 +84,7 @@ document.getElementById('btn-violet').addEventListener("click", (e) => {
 // });
 
 // Call function on page exit
-window.onbeforeunload = leaveSession;
+//window.onbeforeunload = leaveSession;
 
 // function completeJoin(results) {
 // 	var status = results['status'];
