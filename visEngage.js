@@ -11,7 +11,8 @@ var expTimeSec = 10; // number of seconds that a message stays before expiring
 // document.getElementById('chatinput').style.display = 'none';
 // document.getElementById('status').style.display = 'none';
 // document.getElementById('leave').style.display = 'none';
-// Action if they push the join button
+
+// Action if they push a color button 
 document.getElementById('btn-red').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-red').innerHTML;
     addColorEntry(color);
