@@ -11,13 +11,16 @@
 
       <title>User's Emotion-Color Response</title>
    </head>
-   <body>
 
+<body>
+<div>
 
+<di>
 <h1><u> Welcome to the Gund Gallery</u></h1>
+</div>
 
-<div class="text-background">
-<p>
+<div id="goal-txt">
+<p class= "text-background">
  Our goal is to capture the emotional response of visitors and display them as colors.<br>
  Please helps us by providing a color you think represented this piece best.<br>
  Below are some colors and their potential emotional attributes:
@@ -25,7 +28,7 @@
 </div>
 
 <div>
-<canvas id="myCanvas" width="960" height="100"></canvas>
+<canvas class="container" id="myCanvas" width="960" height="100" style="margin-top:20px"></canvas>
 <script>
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
@@ -81,7 +84,7 @@ for (let i = 0; i < squareCount; i++) {
 </div>
 
 <div>
-<h4 style="margin-top: 20px;">
+<h4 class="text-background" style="margin-top: 20px;">
 Please select a color you associate this piece with:
 </h4>
 </div>
@@ -91,25 +94,32 @@ Please select a color you associate this piece with:
 </div>
 
 
-<div class="center-buttons" id="input-div"style="display: none;">
+<div class="center-buttons" id="input-div"style="display: none; margin-top:20px;">
+<div style="margin-top:20px">
 <button class="button-style" type="button" id="btn-red" style="background-color:red;border:red; color:white">>Red<</button>
 <button class="button-style" type="button"id="btn-orange" style="background-color:orange;border:orange; color:white">>Orange<</button>
+</div>
+<div style="margin-top:20px">
 <button class="button-style" type="button" id="btn-yellow"style="background-color:yellow;border:yellow; color:black">>Yellow<</button>
 <button class="button-style" type="button" id="btn-green"style="background-color:#32CD32;border:#32CD32; color:white">>Green<</button>
+</div>
+<div style="margin-top:20px">
 <button class="button-style" type="button"id="btn-turquoise" style="background-color:#40E0D0;border:#40E0D0; color:white">>Turquoise<</button>
 <button class="button-style" type="button" id="btn-blue"style="background-color:blue;border:blue; color:white">>Blue<</button>
+</div>
+<div style="margin-top:20px">
 <button class="button-style" type="button" id="btn-purple"style="background-color:purple;border:purple; color:white">>Purple<</button>
 <button class="button-style" type="button"id="btn-violet" style="background-color:violet;border:violet; color:white">>Violet<</button>
 </div>
-
+</div>
 <div id="imgtxt-div">
 <h4 style="margin-top: 20px;">
 An example of what a group of people can create:
 </h4>
 </div>
 
-<div id="img-div">
-<img src="example_of_Art_response.PNG" class="example-img" alt="Example image" width="500" height="300" </img>
+<div id="img-div" class="container">
+<img src="example_of_Art_response.PNG" class="example-img container" alt="Example image" width="500" height="300" </img>
 </div>
 
       <!-- jQuery first, then sweetalert2, then Bootstrap JS, then our js -->
@@ -117,5 +127,6 @@ An example of what a group of people can create:
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
       <script src="visEngage.js"></script>
+</div>
    </body>
 </html>

@@ -16,13 +16,15 @@ const showButton = document.getElementById('btn-input');
 const hiddenButtons = document.getElementById('input-div');
 const image = document.getElementById('img-div');
 const imagetxt = document.getElementById('imgtxt-div');
-
+const goal = document.getElementById('goal-txt');
+ 
 
 showButton.addEventListener('click', () => {
   hiddenButtons.style.display = 'block';
   showButton.style.display = 'none';
   image.style.display = 'none';
   imagetxt.style.display = 'none';
+  goal.style.display = 'none';
 
 });
 // Action if they push a color button 
