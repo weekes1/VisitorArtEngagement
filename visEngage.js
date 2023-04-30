@@ -17,6 +17,38 @@ document.getElementById('btn-red').addEventListener("click", (e) => {
     addColorEntry(color);
 })
 
+document.getElementById('btn-orange').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-orange').innerHTML;
+    addColorEntry(color);
+})
+
+document.getElementById('btn-yellow').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-yellow').innerHTML;
+    addColorEntry(color);
+})
+
+document.getElementById('btn-green').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-green').innerHTML;
+    addColorEntry(color);
+})
+
+document.getElementById('btn-blue').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-blue').innerHTML;
+    addColorEntry(color);
+})
+document.getElementById('btn-turquoise').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-turquoise').innerHTML;
+    addColorEntry(color);
+})
+document.getElementById('btn-purple').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-purple').innerHTML;
+    addColorEntry(color);
+})
+document.getElementById('btn-violet').addEventListener("click", (e) => {
+	let color = document.getElementById('btn-violet').innerHTML;
+    addColorEntry(color);
+})
+
 // Action if complete register button
 // document.getElementById('register-btn').addEventListener("click", registerUser);
 
