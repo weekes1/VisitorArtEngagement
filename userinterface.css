@@ -57,13 +57,15 @@ h1{
   background-repeat: no-repeat;
  background-size: auto;
  background-position:center center;
- text-align:center;
+ text-align:justify;
+ display:flex;
+ justify-content:center;
 }
 
 p{
   padding: 10px;
  font-weight:bold;
- text-align:center;
+ 
 }
 
 h4{
