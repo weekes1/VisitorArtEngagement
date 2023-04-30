@@ -36,7 +36,7 @@ const squareHeight = 100;
 const squareSpacing = 10;
 const squareCount = 8;
 const totalWidth = (squareWidth + squareSpacing) * (squareCount - 1) + squareWidth;
-const startingX = (canvas.width - totalWidth) / 2 - squareWidth/2;
+const startingX = (canvas.width - totalWidth) / 2 - squareWidth/2 + 50;
 const startingY = (canvas.height - squareHeight) / 2;
 
 // Define an array of colors and their names
@@ -87,14 +87,14 @@ Please select a color you associate this piece with:
 </div>
 
 <div class="center-buttons">
-<button class="button-style" type="button" id="btn-red" style="background-color:red;border:red; color:white">Red</button>
-<button class="button-style" type="button"id="btn-orange" style="background-color:orange;border:orange; color:white">Orange</button>
-<button class="button-style" type="button" id="btn-yellow"style="background-color:yellow;border:yellow; color:black">Yellow</button>
-<button class="button-style" type="button" id="btn-green"style="background-color:#32CD32;border:#32CD32; color:white">Green</button>
-<button class="button-style" type="button"id="btn-turquoise" style="background-color:#40E0D0;border:#40E0D0; color:white">Turquoise</button>
-<button class="button-style" type="button" id="btn-blue"style="background-color:blue;border:blue; color:white">Blue</button>
-<button class="button-style" type="button" id="btn-purple"style="background-color:purple;border:purple; color:white">Purple</button>
-<button class="button-style" type="button"id="btn-violet" style="background-color:violet;border:violet; color:white">Violet</button>
+<button class="button-style" type="button" id="btn-red" style="background-color:red;border:red; color:white">>Red<</button>
+<button class="button-style" type="button"id="btn-orange" style="background-color:orange;border:orange; color:white">>Orange<</button>
+<button class="button-style" type="button" id="btn-yellow"style="background-color:yellow;border:yellow; color:black">>Yellow<</button>
+<button class="button-style" type="button" id="btn-green"style="background-color:#32CD32;border:#32CD32; color:white">>Green<</button>
+<button class="button-style" type="button"id="btn-turquoise" style="background-color:#40E0D0;border:#40E0D0; color:white">>Turquoise<</button>
+<button class="button-style" type="button" id="btn-blue"style="background-color:blue;border:blue; color:white">>Blue<</button>
+<button class="button-style" type="button" id="btn-purple"style="background-color:purple;border:purple; color:white">>Purple<</button>
+<button class="button-style" type="button"id="btn-violet" style="background-color:violet;border:violet; color:white">>Violet<</button>
 </div>
 
 <div>
@@ -106,7 +106,6 @@ An example of what a group of people can create:
 <div>
 <img src="example_of_Art_response.PNG" class="example-img" alt="Example image" width="500" height="300" </img>
 </div>
-
 
       <!-- jQuery first, then sweetalert2, then Bootstrap JS, then our js -->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>

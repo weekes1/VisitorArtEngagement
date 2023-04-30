@@ -19,6 +19,7 @@ tr:hover {background-color: #00FF7F}
   border-radius: 10px;
 }
 
+
 body{
     background-image:url(http://www.lemessurier.com/sites/default/files/projectslides/gund_gallery_2_0.jpg);
     background-repeat: no-repeat;
@@ -82,4 +83,5 @@ text-decoration-color: black;
 
 display: block;
 margin: auto;
+margin-bottom:20px;
 }
