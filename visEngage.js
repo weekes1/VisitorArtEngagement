@@ -16,8 +16,11 @@ const showButton = document.getElementById('btn-input');
 const hiddenButtons = document.getElementById('input-div');
 const image = document.getElementById('img-div');
 const imagetxt = document.getElementById('imgtxt-div');
-const goal = document.getElementById('goal-txt');
- 
+const goal = document.getElementById('goal-txt'); 
+const thank = document.getElementById('Thank-div');
+const pls = document.getElementById('pls-div');  
+const canv = document.getElementById('myCanvas'); 
+const welc = document.getElementById('welcome-div'); 
 
 showButton.addEventListener('click', () => {
   hiddenButtons.style.display = 'block';
@@ -31,38 +34,79 @@ showButton.addEventListener('click', () => {
 document.getElementById('btn-red').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-red').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
+     thank.style.display = 'block';
+    
 })
 
 document.getElementById('btn-orange').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-orange').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 
 document.getElementById('btn-yellow').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-yellow').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 
 document.getElementById('btn-green').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-green').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 
 document.getElementById('btn-blue').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-blue').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 document.getElementById('btn-turquoise').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-turquoise').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 document.getElementById('btn-purple').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-purple').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 document.getElementById('btn-violet').addEventListener("click", (e) => {
 	let color = document.getElementById('btn-violet').innerHTML;
     addColorEntry(color);
+     hiddenButtons.style.display = 'none';
+     pls.style.display = 'none';
+     thank.style.display = 'block';
+     canv.style.display = 'none';
+     welc.style.display = 'none';
 })
 
 // Action if complete register button
