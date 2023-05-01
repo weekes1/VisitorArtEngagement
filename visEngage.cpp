@@ -25,7 +25,12 @@ string getUserJSON(vector<userEntry> userVec) {
     resJSON += "[\""+userVec[i].ID+"\",";
     resJSON += "\""+userVec[i].color+"\",";
     resJSON += "\""+userVec[i].timestamp+"\",";
-    resJSON += "\""+userVec[i].location+"\"]";
+    if (i < userVec.size()-1){
+      resJSON += "\""+userVec[i].location+"\"],";
+    }
+    else {
+      resJSON += "\""+userVec[i].location+"\"]";
+    }
   }
   resJSON += "]}";
 

@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Canvas Squares</title>
-    <style>
+    <!-- <style>
       html, body {
         margin: 0;
         padding: 0;
@@ -12,63 +13,11 @@
       canvas {
         display: block;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <canvas id="myCanvas"></canvas>
-    <script>
-      const canvas = document.getElementById('myCanvas');
-      const ctx = canvas.getContext('2d');
-
-      let colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#000000', '#000000', '#000000', '#000000', '#000000'];
-
-      // Randomize the order of colors
-      colors = colors.sort(() => Math.random() - 0.5);
-
-      const canvasWidth = window.innerWidth;
-      const canvasHeight = window.innerHeight;
-
-      const numColors = colors.length;
-      const perfectSquare = Math.floor(Math.sqrt(numColors));
-      const numRows = numColors % perfectSquare === 0 ? perfectSquare : Math.floor(numColors / perfectSquare);
-      const numCols = Math.ceil(numColors / numRows);
-
-      const squareSize = Math.min(canvasWidth / numCols, canvasHeight / numRows);
-
-      canvas.width = canvasWidth;
-      canvas.height = canvasHeight;
-
-      const totalWidth = squareSize * numCols;
-      const totalHeight = squareSize * numRows;
-      const xOffset = (canvasWidth - totalWidth) / 2;
-      const yOffset = (canvasHeight - totalHeight) / 2;
-
-      for (let i = 0; i < numRows * numCols; i++) {
-        if (i >= numColors) break;
-        const row = Math.floor(i / numCols);
-        const col = i % numCols;
-        const x = xOffset + col * squareSize;
-        const y = yOffset + row * squareSize;
-        ctx.fillStyle = colors[i];
-        ctx.fillRect(x, y, squareSize, squareSize);
-      }
-
-      // Fill out any incomplete row with random colors from the vector
-      const lastRowIndex = numRows - 1;
-      const numSquaresInLastRow = numColors - lastRowIndex * numCols;
-      if (numSquaresInLastRow < numCols) {
-        const startIndex = numColors - numSquaresInLastRow;
-        const colorsToFill = numCols - numSquaresInLastRow;
-        for (let i = 0; i < colorsToFill; i++) {
-          const randomColorIndex = Math.floor(Math.random() * colors.length);
-          const randomColor = colors[randomColorIndex];
-          const x = xOffset + (numSquaresInLastRow + i) * squareSize;
-          const y = yOffset + lastRowIndex * squareSize;
-          ctx.fillStyle = randomColor;
-          ctx.fillRect(x, y, squareSize, squareSize);
-        }
-      }
-    </script>
+    <script src="colorOutput.js"></script>
   </body>
 </html>
 
