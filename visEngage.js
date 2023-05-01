@@ -74,7 +74,7 @@ colorButton.addEventListener('click', () => {
 
 // Action if they push a color button 
 document.getElementById('btn-red').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-red').innerHTML;
+	let color = "red";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -84,7 +84,7 @@ document.getElementById('btn-red').addEventListener("click", (e) => {
     })
 
 document.getElementById('btn-orange').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-orange').innerHTML;
+	let color = "orange";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -94,7 +94,7 @@ document.getElementById('btn-orange').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-yellow').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-yellow').innerHTML;
+	let color = "#ffff00";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -104,7 +104,7 @@ document.getElementById('btn-yellow').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-green').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-green').innerHTML;
+	let color = "#32CD32";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -114,7 +114,7 @@ document.getElementById('btn-green').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-blue').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-blue').innerHTML;
+	let color ="blue";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -124,7 +124,7 @@ document.getElementById('btn-blue').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-turquoise').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-turquoise').innerHTML;
+	let color = "#40E0D0";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -134,7 +134,7 @@ document.getElementById('btn-turquoise').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-purple').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-purple').innerHTML;
+	let color = "purple";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -144,7 +144,7 @@ document.getElementById('btn-purple').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-violet').addEventListener("click", (e) => {
-	let color = document.getElementById('btn-violet').innerHTML;
+	let color = "violet";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
