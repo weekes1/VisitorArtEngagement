@@ -25,7 +25,12 @@ string getUserJSON(vector<userEntry> userVec) {
     resJSON += "[\""+userVec[i].ID+"\",";
     resJSON += "\""+userVec[i].color+"\",";
     resJSON += "\""+userVec[i].timestamp+"\",";
-    resJSON += "\""+userVec[i].location+"\"]";
+    if (i < userVec.size()-1){
+      resJSON += "\""+userVec[i].location+"\"],";
+    }
+    else {
+      resJSON += "\""+userVec[i].location+"\"]";
+    }
   }
   resJSON += "]}";
 
@@ -43,19 +48,19 @@ int main(void) {
     res.set_content("Visitor Art Engagement", "text/plain");
   });
 
-   svr.Get(R"(/engage/add/(.*)/(.*))", [&](const Request& req, Response& res) {
+  svr.Get(R"(/engage/add/(.*)/(.*))", [&](const Request& req, Response& res) {
     res.set_header("Access-Control-Allow-Origin","*");
     string color = req.matches[1];
     string location = req.matches[2];
     string result; 
     
     vdb.addEntry(color, location);
-    
+
     result = "{\"status\":\"success\"}";
     res.set_content(result, "text/json");
   });
   
-   svr.Get(R"(/engage/findLoc/(.*))", [&](const Request& req, Response& res) {
+  svr.Get(R"(/engage/findLoc/(.*))", [&](const Request& req, Response& res) {
     string location = req.matches[1];
     res.set_header("Access-Control-Allow-Origin","*");
     string result;
@@ -78,12 +83,10 @@ int main(void) {
     res.set_header("Access-Control-Allow-Origin","*");
     string result;
     vdb.rmLoc(loc);
-
     result = "{\"status\":\"success\"}";
     res.set_content(result, "text/json");
   });
     
   cout << "Server listening on port " << port << endl;
   svr.listen("0.0.0.0", port);
-
 }

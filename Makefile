@@ -34,6 +34,7 @@ visEngage: visEngage.o db.o userEntry.o
 PutHTML:
 	sudo cp userinterface.html /var/www/html/VisitorArtEngagement/
 	sudo cp visEngage.js /var/www/html/VisitorArtEngagement/
+	sudo cp colorOutput.js /var/www/html/VisitorArtEngagement/
 	sudo cp userinterface.css /var/www/html/VisitorArtEngagement/
 	sudo cp Color-emotion-wheel.PNG /var/www/html/VisitorArtEngagement/
 	sudo cp Gund_gal_pic.jpg /var/www/html/VisitorArtEngagement/
