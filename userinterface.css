@@ -28,14 +28,16 @@ background: linear-gradient(to right, red, orange, yellow, #32CD32, #40E0D0, blu
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
-@media (max-width: 767.98px) {
+/*@media (max-width: 767.98px) {
   body {
     background-size: 100%;
   }
-}
+}*/
+
 body{
-    background-image:url(http://www.lemessurier.com/sites/default/files/projectslides/gund_gallery_2_0.jpg);
+    background-image:url(http://www.lemessurier.com/sites/default/files/projectslides/gund_gallery_5.jpg);
     background-repeat: no-repeat;
+    filter:greyscale(100%);
     background-size: cover;
     background-position: center;
     width: 100%; 
@@ -45,7 +47,8 @@ body{
 
 h1{
  background-image: url("http://wallpapercave.com/wp/IfRFpPz.jpg");
-  color: transparent;
+ /* color: transparent;*/ 
+ color:black;
  -webkit-background-clip: text; 
   background-clip: text;
    font-family: "Brush Script MT", cursive;
