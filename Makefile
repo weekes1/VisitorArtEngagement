@@ -38,7 +38,7 @@ PutHTML:
 	sudo cp Color-emotion-wheel.PNG /var/www/html/VisitorArtEngagement/
 	sudo cp Gund_gal_pic.jpg /var/www/html/VisitorArtEngagement/
 	sudo cp colorOutputVisEngage.html /var/www/html/VisitorArtEngagement/
-
+	sudo cp example_of_Art_response.PNG /var/www/html/VisitorArtEngagement/
 
 	echo "Current contents of your HTML directory: "
 	ls -l /var/www/html/VisitorArtEngagement

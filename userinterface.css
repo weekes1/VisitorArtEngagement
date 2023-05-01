@@ -27,6 +27,14 @@ background: linear-gradient(to right, red, orange, yellow, #32CD32, #40E0D0, blu
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
+.piece-button-style{
+    bakcground:black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
 
 /*@media (max-width: 767.98px) {
   body {

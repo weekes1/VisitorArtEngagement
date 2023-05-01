@@ -83,35 +83,49 @@ for (let i = 0; i < squareCount; i++) {
 </script>
 </div>
 
-<div id="pls-div">
+<div id="pls-div" style="display:none;">
 <h4 class="text-background" style="margin-top: 20px;">
 Please select a color you associate this piece with:
 </h4>
 </div>
 
-<div class= "center-buttons">
-<button class="input-button-style" type="button" id="btn-input">Choose Color</button>
+<div class= "center-buttons" id="btn-input" style="display:none;">
+<button class="input-button-style" type="button" >Choose Color</button>
+</div>
+
+<div id="piece-choose-div" >
+<h4 class="text-background" style="margin-top: 20px;">
+Which piece were you observing today?
+</h4>
+</div>
+
+<div class= "center-buttons" id="choose-piece-btn">
+<button class="piece-button-style" type="button" id="btn-video">Video</button>
+<button class="piece-button-style" type="button" id="btn-visiting">Visiting</button>
+<button class="piece-button-style" type="button" id="btn-kenyon">Kenyon</button>
 </div>
 
 
 <div class="center-buttons" id="input-div"style="display: none; margin-top:20px;">
 <div style="margin-top:20px">
-<button class="button-style" type="button" id="btn-red" style="background-color:red;border:red; color:white">>Red<</button>
-<button class="button-style" type="button"id="btn-orange" style="background-color:orange;border:orange; color:white">>Orange<</button>
+<button class="button-style" type="button" id="btn-red" style="background-color:red;border:red; color:white">Passion</button>
+<button class="button-style" type="button"id="btn-orange" style="background-color:orange;border:orange; color:white">Joy</button>
 </div>
 <div style="margin-top:20px">
-<button class="button-style" type="button" id="btn-yellow"style="background-color:yellow;border:yellow; color:black">>Yellow<</button>
-<button class="button-style" type="button" id="btn-green"style="background-color:#32CD32;border:#32CD32; color:white">>Green<</button>
+<button class="button-style" type="button" id="btn-yellow"style="background-color:yellow;border:yellow; color:black">Happy</button>
+<button class="button-style" type="button" id="btn-green"style="background-color:#32CD32;border:#32CD32; color:white">Peace</button>
 </div>
 <div style="margin-top:20px">
-<button class="button-style" type="button"id="btn-turquoise" style="background-color:#40E0D0;border:#40E0D0; color:white">>Turquoise<</button>
-<button class="button-style" type="button" id="btn-blue"style="background-color:blue;border:blue; color:white">>Blue<</button>
+<button class="button-style" type="button"id="btn-turquoise" style="background-color:#40E0D0;border:#40E0D0; color:white">Hope</button>
+<button class="button-style" type="button" id="btn-blue"style="background-color:blue;border:blue; color:white">Sadness</button>
 </div>
 <div style="margin-top:20px">
-<button class="button-style" type="button" id="btn-purple"style="background-color:purple;border:purple; color:white">>Purple<</button>
-<button class="button-style" type="button"id="btn-violet" style="background-color:violet;border:violet; color:white">>Violet<</button>
+<button class="button-style" type="button" id="btn-purple"style="background-color:purple;border:purple; color:white">Reflective</button>
+<button class="button-style" type="button"id="btn-violet" style="background-color:violet;border:violet; color:white">Power</button>
 </div>
 </div>
+
+
 <div id="imgtxt-div">
 <h4 style="margin-top: 20px;">
 An example of what a group of people can create:
