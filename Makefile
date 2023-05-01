@@ -34,11 +34,15 @@ visEngage: visEngage.o db.o userEntry.o
 PutHTML:
 	sudo cp userinterface.html /var/www/html/VisitorArtEngagement/
 	sudo cp visEngage.js /var/www/html/VisitorArtEngagement/
-	sudo cp colorOutput.js /var/www/html/VisitorArtEngagement/
 	sudo cp userinterface.css /var/www/html/VisitorArtEngagement/
 	sudo cp Color-emotion-wheel.PNG /var/www/html/VisitorArtEngagement/
 	sudo cp Gund_gal_pic.jpg /var/www/html/VisitorArtEngagement/
-	sudo cp colorOutputVisEngage.html /var/www/html/VisitorArtEngagement/
+	sudo cp outputVideo.html /var/www/html/VisitorArtEngagement/
+	sudo cp outputVideo.js /var/www/html/VisitorArtEngagement/
+	sudo cp outputVisit.html /var/www/html/VisitorArtEngagement/
+	sudo cp outputVisit.js /var/www/html/VisitorArtEngagement/
+	sudo cp outputKenyon.html /var/www/html/VisitorArtEngagement/
+	sudo cp outputKenyon.js /var/www/html/VisitorArtEngagement/
 	sudo cp example_of_Art_response.PNG /var/www/html/VisitorArtEngagement/
 
 	echo "Current contents of your HTML directory: "
