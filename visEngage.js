@@ -49,7 +49,7 @@ visitingButton.addEventListener('click', () => {
  piece.style.display = 'none';
  pls.style.display = 'block';
  colorButton.style.display = 'block';
- loc="Visiting";
+ loc="Visit";
 });
 kenyonButton.addEventListener('click', () => {
   colorButton.style.display = 'block';
