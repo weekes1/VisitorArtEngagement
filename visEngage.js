@@ -94,7 +94,7 @@ document.getElementById('btn-orange').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-yellow').addEventListener("click", (e) => {
-	let color = "#ffff00";
+	let color = "Yellow";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -104,7 +104,7 @@ document.getElementById('btn-yellow').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-green').addEventListener("click", (e) => {
-	let color = "#32CD32";
+	let color = "Lime";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
@@ -124,7 +124,7 @@ document.getElementById('btn-blue').addEventListener("click", (e) => {
 })
 
 document.getElementById('btn-turquoise').addEventListener("click", (e) => {
-	let color = "#40E0D0";
+	let color = "Cyan";
     addColorEntry(color);
      colorButtons.style.display = 'none';
      pls.style.display = 'none';
