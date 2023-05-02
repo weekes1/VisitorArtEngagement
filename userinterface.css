@@ -28,10 +28,10 @@ background: linear-gradient(to right, red, orange, yellow, #32CD32, #40E0D0, blu
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 .piece-button-style{
-    bakcground:black;
+    background:black;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: black;
     border-radius: 5px;
     
 }

@@ -29,128 +29,83 @@ const kenyonButton = document.getElementById('btn-kenyon');
  
 
 videoButton.addEventListener('click', () => {
-  colorButton.style.display = 'block';
-  image.style.display = 'none';
-  imagetxt.style.display = 'none';
-  goal.style.display = 'none';
-  piecebtn.style.display = 'none';
- piece.style.display = 'none';
- pls.style.display = 'block';
- colorButton.style.display = 'block';
- loc="Video";
+    showInputs();
+    loc="Video";
 });
 
 visitingButton.addEventListener('click', () => {
-  colorButton.style.display = 'block';
-  image.style.display = 'none';
-  imagetxt.style.display = 'none';
-  goal.style.display = 'none';
-  piecebtn.style.display = 'none';
- piece.style.display = 'none';
- pls.style.display = 'block';
- colorButton.style.display = 'block';
- loc="Visit";
+    showInputs();
+    loc="Visit";
 });
 kenyonButton.addEventListener('click', () => {
-  colorButton.style.display = 'block';
-  image.style.display = 'none';
-  imagetxt.style.display = 'none';
-  goal.style.display = 'none';
-  piecebtn.style.display = 'none';
- piece.style.display = 'none';
- pls.style.display = 'block';
- colorButton.style.display = 'block';
- loc="Kenyon";
+    showInputs();
+    loc="Kenyon";
 });
 
-colorButton.addEventListener('click', () => {
-  inputButtons.style.display = 'block';
-  colorButton.style.display = 'none';
-  image.style.display = 'none';
-  imagetxt.style.display = 'none';
-  goal.style.display = 'none';
-  canv.style.display = 'none';
-});
+// colorButton.addEventListener('click', () => {
+//   inputButtons.style.display = 'block';
+//   colorButton.style.display = 'none';
+//   image.style.display = 'none';
+//   imagetxt.style.display = 'none';
+//   goal.style.display = 'none';
+//   canv.style.display = 'none';
+// });
 
 // Action if they push a color button 
 document.getElementById('btn-red').addEventListener("click", (e) => {
 	let color = "red";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
-     thank.style.display = 'block';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
     })
 
 document.getElementById('btn-orange').addEventListener("click", (e) => {
 	let color = "orange";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 document.getElementById('btn-yellow').addEventListener("click", (e) => {
 	let color = "Yellow";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 document.getElementById('btn-green').addEventListener("click", (e) => {
 	let color = "Lime";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 document.getElementById('btn-blue').addEventListener("click", (e) => {
 	let color ="blue";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 document.getElementById('btn-turquoise').addEventListener("click", (e) => {
 	let color = "Cyan";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 document.getElementById('btn-purple').addEventListener("click", (e) => {
 	let color = "purple";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 document.getElementById('btn-violet').addEventListener("click", (e) => {
 	let color = "violet";
     addColorEntry(color);
-     colorButtons.style.display = 'none';
-     pls.style.display = 'none';
-     thank.style.display = 'block';
-     canv.style.display = 'none';
-     welc.style.display = 'none';
+    displayThanks();
+    setTimeout(refreshInputs, 2500)
 })
 
 function addColorEntry(color) {
@@ -161,4 +116,33 @@ function addColorEntry(color) {
     .catch(error => {
         {alert("Error: Something went wrong:"+error);}
     })
+}
+
+function showInputs() {
+    inputButtons.style.display = 'block';
+    image.style.display = 'none';
+    imagetxt.style.display = 'none';
+    goal.style.display = 'none';
+    piecebtn.style.display = 'none';
+    piece.style.display = 'none';
+    pls.style.display = 'block';
+}
+
+function displayThanks() {
+    inputButtons.style.display = 'none';
+    pls.style.display = 'none';
+    canv.style.display = 'none';
+    welc.style.display = 'none';
+    thank.style.display = 'block';
+}
+
+function refreshInputs() {
+    welc.style.display = 'block';
+    thank.style.display = 'none';
+    goal.style.display = 'block';
+    canv.style.display = 'block';
+    image.style.display = 'block';
+    imagetxt.style.display = 'block';
+    piece.style.display = 'block';
+    piecebtn.style.display = 'block';
 }
