@@ -8,7 +8,7 @@ window.onbeforeunload = pageClose;
 
 var inthandle;
 function pageLoad() {
-    inthandle = setInterval(function() { findLoc(loc);}, 600);
+    inthandle = setInterval(function() { findLoc(loc);}, 60000);
 }
 
 function pageClose() {
