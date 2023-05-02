@@ -45,61 +45,17 @@ kenyonButton.addEventListener('click', () => {
 
 
 // Action if they push a color button: adds the color, displays thanks, waits 2.5s resets page
-document.getElementById('btn-red').addEventListener("click", (e) => {
-	let color = "red";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-    })
-
-document.getElementById('btn-orange').addEventListener("click", (e) => {
-	let color = "orange";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
-
-document.getElementById('btn-yellow').addEventListener("click", (e) => {
-	let color = "Yellow";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
-
-document.getElementById('btn-green').addEventListener("click", (e) => {
-	let color = "Lime";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
-
-document.getElementById('btn-blue').addEventListener("click", (e) => {
-	let color ="blue";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
-
-document.getElementById('btn-turquoise').addEventListener("click", (e) => {
-	let color = "Cyan";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
-
-document.getElementById('btn-purple').addEventListener("click", (e) => {
-	let color = "purple";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
-
-document.getElementById('btn-violet').addEventListener("click", (e) => {
-	let color = "violet";
-    addColorEntry(color);
-    displayThanks();
-    setTimeout(refreshInputs, 2500)
-})
+const colorWheel = document.getElementById("color-wheel");
+colorWheel.addEventListener("click", function(event) {
+	var colorSlice = event.target.closest(".color-slice");
+	if (colorSlice) {
+	var colorId = colorSlice.getAttribute("id").substring(6); 
+	console.log(colorId);
+	addColorEntry(colorId);
+    	displayThanks();
+    	setTimeout(refreshInputs, 2500)
+}
+});
 
 
 // hits the add color and location end point with user input color and location
