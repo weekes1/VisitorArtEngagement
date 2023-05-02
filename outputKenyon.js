@@ -2,14 +2,13 @@ var baseUrl = 'http://18.223.238.7:5010';
 var state="off";
 var loc="Kenyon";
 
-window.onload = pageLoad();
-window.onbeforeunload = pageClose();
+window.onload = pageLoad;
+window.onbeforeunload = pageClose;
 
 
 var inthandle;
 function pageLoad() {
-    findLoc(loc)
-    inthandle = setInterval(findLoc(loc), 60000)
+    inthandle = setInterval(function() { findLoc(loc);}, 600);
 }
 
 function pageClose() {
