@@ -19,15 +19,16 @@
 
 using namespace std;
 
+// class for accessing and communicating with databse
 class visDB {
 public:
     visDB();
-    vector<userEntry> findByLocation(string location);
-    vector<userEntry> findByColor(string color);
+    vector<userEntry> findByLocation(string location); // returns vector of userEntry that are in the location searched
+    vector<userEntry> findByColor(string color); // returns vector of userEntry that are of the color searched
 
-    userEntry fetchEntry(string id);
-    void addEntry(string color, string location);
-    void rmLoc(string location);
+    userEntry fetchEntry(string id); // returns userEntry of the id searched
+    void addEntry(string color, string location); // adds an entry with that color and location
+    void rmLoc(string location); // removes all the entries of the location
     
 private:
     const string db_url=DB_URL;

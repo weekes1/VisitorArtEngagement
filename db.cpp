@@ -5,7 +5,7 @@
 #include "db.h"
 #include "userEntry.h"
 
-
+// constructor
 visDB::visDB() {
   	// Instantiate Driver
   	driver = sql::mariadb::get_driver_instance();
@@ -34,7 +34,7 @@ visDB::visDB() {
    	
 }
 
-
+// returns vector of userEntry that are in the location searched
 vector<userEntry> visDB::findByLocation(string location) {
 
 	vector<userEntry> list;
@@ -60,7 +60,7 @@ vector<userEntry> visDB::findByLocation(string location) {
 
 }
 
-
+// returns vector of userEntry that are of the color searched
 vector<userEntry> visDB::findByColor(string color) {
 
 	vector<userEntry> list;
@@ -86,7 +86,7 @@ vector<userEntry> visDB::findByColor(string color) {
 
 }
 
-
+// adds an entry with that color and location
 void visDB::addEntry(string color, string location){
 
 	if (!conn) {
@@ -99,6 +99,7 @@ void visDB::addEntry(string color, string location){
   	stmnt->executeQuery("INSERT INTO visitorEngagement (Color, Location) VALUES ('"+color+"','"+location+"')");
 }
 
+// returns userEntry of the id searched
 userEntry visDB::fetchEntry(string id){
 
 	userEntry entry;	
@@ -121,6 +122,7 @@ userEntry visDB::fetchEntry(string id){
     return entry;
 }
 
+// removes all the entries of the location
 void visDB::rmLoc(string location) {
 	if (!conn) {
    		cerr << "Invalid database connection" << endl;

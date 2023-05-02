@@ -19,6 +19,7 @@ using namespace std;
 
 const int port = 5010;
 
+// converts a vector of user entry into a valid JSON string
 string getUserJSON(vector<userEntry> userVec) {
   string resJSON = "{\"users\": [";
   for (int i = 0; i < userVec.size(); i++) {
@@ -48,6 +49,7 @@ int main(void) {
     res.set_content("Visitor Art Engagement", "text/plain");
   });
 
+  // endpoint to add an entry into database provided color and location
   svr.Get(R"(/engage/add/(.*)/(.*))", [&](const Request& req, Response& res) {
     res.set_header("Access-Control-Allow-Origin","*");
     string color = req.matches[1];
@@ -60,6 +62,7 @@ int main(void) {
     res.set_content(result, "text/json");
   });
   
+  // endpoint that returns JSON of entries for a specific location
   svr.Get(R"(/engage/findLoc/(.*))", [&](const Request& req, Response& res) {
     string location = req.matches[1];
     res.set_header("Access-Control-Allow-Origin","*");
@@ -69,6 +72,7 @@ int main(void) {
     res.set_content(result, "text/json");
   });
 
+  // endpoint that returns JSON of entries for a specific color
   svr.Get(R"(/engage/findCol/(.*))", [&](const Request& req, Response& res) {
     string color = req.matches[1];
     res.set_header("Access-Control-Allow-Origin","*");
@@ -78,6 +82,7 @@ int main(void) {
     res.set_content(result, "text/json");
   });
 
+  // endpoint that removes all entries of a specific location from db
   svr.Get(R"(/engage/clearLoc/(.*))", [&](const Request& req, Response& res) {
     string loc = req.matches[1];
     res.set_header("Access-Control-Allow-Origin","*");
