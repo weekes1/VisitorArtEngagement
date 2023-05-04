@@ -1,6 +1,17 @@
 
 tr:hover {background-color: #00FF7F}
 
+.custom-bg {
+  background-color: WhiteSmoke; 
+}
+.image-container img {
+  max-width: 100%;
+ height:auto;
+ position: absolute;
+ top: 5px;
+ left:50%;
+transform: translateX(-50%);
+}
 
 .center {
   display: block;
@@ -28,10 +39,18 @@ background: linear-gradient(to right, red, orange, yellow, #32CD32, #40E0D0, blu
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 .piece-button-style{
-    background:black;
+    background:WhiteSmoke;
+    color: #404040;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+.piece-button-kenyon{
+    background:#432C91;
     color: white;
     padding: 10px 20px;
-    border: black;
+    border: none;
     border-radius: 5px;
     
 }
@@ -45,7 +64,7 @@ body{
     height: 100%;
 
 }
-
+/*
 h1{
  background-image: url("http://www.cloudintheocean.com/wp-content/uploads/2015/11/Cream-Textured-Paper-Background-Images.jpg");
  color:black;
@@ -53,7 +72,7 @@ h1{
   background-clip: text;
    font-family: "Brush Script MT", cursive;
    text-align: center;
-}
+}*/
 
 .text-background{
  background-image: url("http://www.cloudintheocean.com/wp-content/uploads/2015/11/Cream-Textured-Paper-Background-Images.jpg");
@@ -67,20 +86,18 @@ h1{
 
 p{
   padding: 10px;
-  font-family: "Vivaldi";
+  font-family: "Montserrat";
  font-weight:bold;
+text-align:center;
  
 }
 
 h4{
- text-align:center;
-  background-image: url("http://www.cloudintheocean.com/wp-content/uploads/2015/11/Cream-Textured-Paper-Background-Images.jpg");
-  background-repeat:no-repeat;
-  background-size: auto;
-  background-position:center center;
+  color:#404040;
   padding: 10px;
-  font-family: "Vivaldi";
+  font-family: "Montserrat";
  font-weight:bold;
+ text-align:center;
 }
 
 canvas {
