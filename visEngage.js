@@ -2,7 +2,7 @@
 // Jim Skon 2022
 // Kenyon College
 
-var baseUrl = 'http://18.223.238.7:5010';
+var baseUrl = 'http://3.87.226.20:5010';
 var state="off";
 var loc="JS-Test";
 var expTimeSec = 10; // number of seconds that a message stays before expiring
@@ -16,11 +16,10 @@ const colorButton = document.getElementById('btn-input');
 const inputButtons = document.getElementById('input-div');
 const image = document.getElementById('img-div');
 const imagetxt = document.getElementById('imgtxt-div');
-const goal = document.getElementById('goal-txt'); 
+//const goal = document.getElementById('goal-txt'); 
 const thank = document.getElementById('Thank-div');
 const pls = document.getElementById('pls-div');  
 const canv = document.getElementById('myCanvas'); 
-const welc = document.getElementById('welcome-div'); 
 const piece = document.getElementById('piece-choose-div'); 
 const piecebtn = document.getElementById('choose-piece-btn'); 
 const videoButton = document.getElementById('btn-video');
@@ -74,7 +73,7 @@ function showColorInputs() {
     inputButtons.style.display = 'block';
     image.style.display = 'none';
     imagetxt.style.display = 'none';
-    goal.style.display = 'none';
+  //  goal.style.display = 'none';
     piecebtn.style.display = 'none';
     piece.style.display = 'none';
     pls.style.display = 'block';
@@ -85,15 +84,13 @@ function displayThanks() {
     inputButtons.style.display = 'none';
     pls.style.display = 'none';
     canv.style.display = 'none';
-    welc.style.display = 'none';
     thank.style.display = 'block';
 }
 
 // resets the appearance of the page to how it originally is
 function refreshInputs() {
-    welc.style.display = 'block';
     thank.style.display = 'none';
-    goal.style.display = 'block';
+//    goal.style.display = 'block';
     canv.style.display = 'block';
     image.style.display = 'block';
     imagetxt.style.display = 'block';

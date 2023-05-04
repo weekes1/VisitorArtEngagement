@@ -96,24 +96,24 @@
 <body>
 <div>
 
-  <div id="welcome-div">
-    <h1><u> Welcome to the Gund Gallery</u></h1>
-  </div>
+<div class="image-container"style="margin-bottom: 100px;">
+ <div class= "text-center">
+  <img src="http://www.thegundgallery.org/wp-content/themes/gund/img/facebook.gif" alt="Description of the image">
+</div>
+</div>
 
-  <div id="goal-txt">
-    <p class= "text-background">
-    Our goal is to capture the emotional response of visitors and display them as colors.<br>
-    Please help us by providing a color you think represented this piece best.<br>
-    Below are some colors and their potential emotional attributes:
+<!--  <div id="goal-txt" class="container">
+    <p class= "custom-purple-bg text-white"style="margin-top: 100px;">
+    
     </p>
   </div>
-
+-->
   <div>
     <canvas class="container" id="myCanvas" width="960" height="100" style="margin-top:20px"></canvas>
   </div>
 
-  <div id="pls-div" style="display:none;">
-    <h4 class="text-background" style="margin-top: 20px;">
+  <div id="pls-div" class="container" style="display:none">
+    <h4 class="custom-bg" style="margin-top: 20px;">
     Please select a color you associate this piece with:
     </h4>
   </div>
@@ -122,14 +122,14 @@
     <button class="input-button-style" type="button" >Choose Color</button>
   </div>
 
-  <div id="piece-choose-div" >
-    <h4 class="text-background" style="margin-top: 20px;">Which piece were you observing today?</h4>
+  <div id="piece-choose-div" class="container" >
+    <h4 class="custom-bg" style="margin-top: 20px;">Which piece were you observing today?</h4>
   </div>
 
   <div class= "center-buttons" id="choose-piece-btn">
     <button class="piece-button-style" type="button" id="btn-video">Video</button>
     <button class="piece-button-style" type="button" id="btn-visiting">Visiting</button>
-    <button class="piece-button-style" type="button" id="btn-kenyon">Kenyon</button>
+    <button class="piece-button-kenyon" type="button" id="btn-kenyon">Kenyon</button>
   </div>
 
 
@@ -148,16 +148,17 @@
   </div>
 
 
-  <div id="imgtxt-div">
-    <h4 style="margin-top: 20px;">An example of what a group of people can create:</h4>
+  <div id="imgtxt-div" class="container">
+    <h4 class= "custom-bg" style="margin-top: 20px;">An example of what a group of people can create:</h4>
   </div>
 
   <div id="img-div" class="container">
     <img src="example_of_Art_response.PNG" class="example-img container" alt="Example image" width="500" height="300">
   </div>
 
+
   <div class="container" id="Thank-div" style="display:none;">
-    <h1>Thank you for visiting the Gund Gallery</h1>
+    <h4 class="custom-bg">Thank you for visiting the Gund Gallery</h4>
   </div>
 </div>
 
