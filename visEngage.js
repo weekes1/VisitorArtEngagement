@@ -77,6 +77,7 @@ function showColorInputs() {
     piecebtn.style.display = 'none';
     piece.style.display = 'none';
     pls.style.display = 'block';
+    canv.style.display = 'block';
 }
 
 // hides all inputs and shows a thank you message to the user
