@@ -83,12 +83,18 @@ int main(void) {
   });
 
   // endpoint that removes all entries of a specific location from db
-  svr.Get(R"(/engage/clearLoc/(.*))", [&](const Request& req, Response& res) {
+  svr.Get(R"(/engage/clearLoc/(.*)/(.*))", [&](const Request& req, Response& res) {
     string loc = req.matches[1];
+    string pass = req.matches[2];
     res.set_header("Access-Control-Allow-Origin","*");
     string result;
-    vdb.rmLoc(loc);
-    result = "{\"status\":\"success\"}";
+    if (pass == "GallantGund"){
+        vdb.rmLoc(loc);
+        result = "{\"status\":\"success\"}";
+    }
+    else {
+        result = "{\"status\":\"fail incorrect password\"}";
+    }
     res.set_content(result, "text/json");
   });
     
