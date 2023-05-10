@@ -88,3 +88,8 @@ Make sure to change the ip address to match your own in the following files:
 Ensure that you have MariaDB and the C++ MariaDB connector downloaded
 
 In db.h change the USER and PASS macros to be your own username and password for your MariaDB
+
+# clearLoc Endpoint
+The clearLoc endpoint is password protected with the password **_GallantGund_**
+
+To use the endpoint type into the search bar *ip_address:5010/engage/clearLoc/Location/Password*
